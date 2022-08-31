@@ -1,27 +1,38 @@
 .features__list {
-	@extend %flex-wrap;
+	display: flex;
+	flex-wrap: wrap;
 
 	gap: $margin-block;
 }
 
-.features-picture {
-	width: calc((100% - 90px) / 4);
-	min-height: 248px;
+.features-picture__icon {
+	@extend %flex-wrap;
+	justify-content: center;
+	background-color: #f5f4fa;
+	width: 100%;
+	height: 120px;
+	margin-bottom: 30px;
+}
 
-	&__icon {
-		@extend %flex-wrap;
-		justify-content: center;
-		background-color: #f5f4fa;
-		width: 100%;
-		height: 120px;
-		margin-bottom: 30px;
+.features-picture__subtitle {
+	margin-bottom: 10px;
+	color: $primary-text-color;
+	font-size: $size-small;
+	line-height: 1.14;
+	text-transform: uppercase;
+	text-align: center;
+
+	@include tablet {
+		text-align: start;
 	}
+}
 
-	&__subtitle {
-		margin-bottom: 10px;
-		color: $primary-text-color;
-		font-size: $size-small;
-		line-height: 1.14;
-		text-transform: uppercase;
+.features-picture {
+	@include tablet  {
+		width: calc((100% - 30px) / 2);
+	}
+	@include desktop {
+		width: calc((100% - 90px) / 4);
+		min-height: 248px;
 	}
 }

@@ -1,7 +1,19 @@
 .filters {
-	@extend %flex-center;
-	gap: 8px;
-	margin-bottom: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	gap: 15px 8px;
+	margin-bottom: 40px;
+
+	// &__btn:nth-child(n + 4) {
+	// 		flex-flow: column wrap;
+	// 	}
+
+	@media screen and (min-width: 768px) {
+		justify-content: center;
+		margin-bottom: 50px;
+	}
 
 	&__btn {
 		@include transitionthree(color, background-color, box-shadow);
@@ -25,54 +37,68 @@
 		background-color: $accent-btn-background-color;
 		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	}
+
+	&__btn:last-child {
+		margin-right: 8px;
+	}
 }
 // projects
 .projects {
-	@extend %flex-wrap;
-	gap: $margin-block;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
 
 	&__item {
-		width: calc((100% - 60px) / 3);
+		display: flex;
+		flex-basis: 100%;
 
-		background-color: #ffffff;
+		@media screen and (min-width: 768px) {
+			flex-basis: calc((100% - 30px) / 2);
+		}
+
+		@media screen and (min-width: 1200px) {
+			flex-basis: calc((100% - 60px) / 3);
+		}
 	}
 }
 
 .card {
 	@include transition(box-shadow);
-	display: block;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0;
+	width: 100%;
 
+	&__discription {
+		flex-grow: 1;
+		padding: 20px 24px;
+		border-left: 1px solid $border-color;
+		border-right: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		text-decoration: none;
+	}
 
-&__discription {
-	padding: 20px 24px;
-	border-left: 1px solid $border-color;
-	border-right: 1px solid$border-color;
-	border-bottom: 1px solid $border-color;
-	text-decoration: none;
-}
+	&__title {
+		margin-bottom: 4px;
 
-&__title {
-	margin-bottom: 4px;
+		font-weight: $weidth-bold;
+		font-size: $size-big;
+		line-height: 2;
+		letter-spacing: $spacing-big;
+		color: $primary-text-color;
+	}
 
-	font-weight: $weidth-bold;
-	font-size: $size-big;
-	line-height: 2;
-	letter-spacing: $spacing-big;
-	color: $primary-text-color;
-}
+	&__subject {
+		margin-bottom: 0;
+		line-height: 1.88;
 
-&__subject {
-	margin-bottom: 0;
-	line-height: 1.88;
-
-	color: $first-text-color;
-}
+		color: $first-text-color;
+	}
 	&:hover,
 	&:focus {
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 	}
 }
-
 
 .overlay {
 	position: relative;
@@ -93,9 +119,7 @@
 		background-color: rgba(33, 150, 243, 0.9);
 
 		transform: translateY(100%);
-        @include transition(transform)
-        
-		
+		@include transition(transform);
 	}
 }
 

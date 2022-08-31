@@ -1,10 +1,26 @@
 body {
-    font-family: $font-main;
-    color: $first-text-color;
-    font-weight: $weidth-regular;
-    font-size: $size-small;
-    line-height: 1.71;
-    letter-spacing: $spacing-medium;
+	font-family: $font-main;
+	color: $first-text-color;
+	font-weight: $weidth-regular;
+	font-size: $size-small;
+	line-height: 1.71;
+	letter-spacing: $spacing-medium;
+
+	&.modal-open {
+		overflow: hidden;
+	}
+
+	&.menu-open {
+		@media screen and (max-width: 767px) {
+			overflow: hidden;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	main {
+		margin-top: 61px;
+	}
 }
 
 img {
@@ -17,20 +33,45 @@ button {
 	cursor: pointer;
 	border-radius: 4px;
 }
-.container {
-	width: 1200px;
-	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-.section {
-	padding: 94px 0;
-}
-.title {
-    margin-bottom: 50px;
 
-    color: $primary-text-color;
-    font-size: $size-title-1;
-    line-height: 1.17;
-    text-align: center;
+.container {
+	width: 100%;
+	padding: 0 15px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (min-width: 480px) {
+		width: 480px;
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 768px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 1200px;
+	}
+}
+
+.section {
+	padding: 60px 0;
+	margin: 0 auto 0;
+	@media screen and (min-width: 1200px) {
+		padding: 94px 0;
+	}
+}
+
+.title {
+	margin-bottom: 30px;
+
+	color: $primary-text-color;
+	font-size: 28px;
+	line-height: 1.18;
+	text-align: center;
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+		font-size: $size-title-1;
+		line-height: 1.17;
+	}
 }

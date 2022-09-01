@@ -1,18 +1,15 @@
 .hero {
-	// max-width: 1600px;
-	// margin: 0 auto;
-	// padding-top: 200px;
-	// padding-bottom: 200px;
+
 
 	text-align: center;
 
 	background-color: #c4c4c4;
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-		url(../images/img-overlay.jpg);
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 480px 400px;
+	background-size: cover;
 	margin: 0 auto;
+	
 
 	&__container {
 		padding: 118px 0;
@@ -21,10 +18,36 @@
 			padding: 200px 0;
 		}
 	}
+	@media screen and (min-device-pixel-ratio: 2),
+		screen and (min-resolution: 192dpi),
+		screen and (min-resolution: 2dppx) {
+		background-image: url(../images/hero-mobile@2x.jpg);
+	}
+
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+		background-size: 768px 400px;
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+		screen and (min-resolution: 192dpi) and (min-width: 768px),
+		screen and (min-resolution: 2dppx) and (min-width: 768px) {
+		background-image: url(../images/hero@2x.jpg);
+	}
+
+	@media screen and (min-width: 1200px) {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop.jpg);
+		background-size: 1600px 600px;
+	}
+
+	@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+		screen and (min-resolution: 192dpi) and (min-width: 1200px),
+		screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+		background-image: url(../images/hero-desktop@2x.jpg);
+	}
 
 	&__title {
 		margin: auto;
-		width: 360px;
 		margin-bottom: $margin-block;
 		color: $second-text-color;
 		font-weight: $weidth-black;
@@ -32,6 +55,11 @@
 		line-height: 1.62;
 		letter-spacing: $spacing-big;
 		text-transform: uppercase;
+
+		@media screen and (min-width: 768px) {
+		
+			width: 360px;
+		}
 
 		@media screen and (min-width: 1200px) {
 			font-size: $size-title;

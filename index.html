@@ -18,9 +18,7 @@
 		<!-- header -->
 		<header class="header">
 			<div class="container header__container">
-				<a href="./index.html" lang="en" class="logo">
-					Web<span class="logo__txt--black">Studio</span>
-				</a>
+				<a href="./index.html" lang="en" class="logo"> Web<span class="logo__txt--black">Studio</span> </a>
 				<div class="menu-conteiner" id="menu-conteiner" data-menu>
 					<nav class="nav">
 						<ul class="navigation">
@@ -126,15 +124,53 @@
 					<h2 class="title">Чим ми займаємося</h2>
 					<ul class="work__list">
 						<li class="work-item">
-							<img src="./images/desktop-32.jpg" alt="Планшет на столі" width="370" height="294" />
+							<picture>
+								<source
+									srcset="./images/work-box-1.webp 370w, ./images/work-box-1@2x.webp 740w"
+									type="image/webp"
+									sizes="(min-width: 1200px) 370px"
+								/>
+								<source
+									srcset="./images/work-box-1.jpg 370w, ./images/work-box-1@2x.jpg 740w"
+									type="image/jpeg"
+									sizes="(min-width: 1200px) 370px"
+								/>
+								<img src="./images/work-box-1.jpg" alt="Планшет на столі" width="370" />
+							</picture>
 							<p class="work-item__text">Десктопні додатки</p>
 						</li>
 						<li class="work-item">
-							<img src="./images/mobile.jpg" alt="Телефон в руці" width="370" height="294" />
+							<picture>
+								<source
+									srcset="./images/work-box-2.webp 370w, ./images/work-box-2@2x.webp 740w"
+									type="image/webp"
+									sizes="(min-width: 1200px) 370px"
+								/>
+								<source
+									srcset="./images/work-box-2.jpg 370w, ./images/work-box-2@2x.jpg 740w"
+									type="image/jpeg"
+									sizes="(min-width: 1200px) 370px"
+								/>
+								<img src="./images/work-box-2.jpg" alt="Телефон в руці" width="370" />
+							</picture>
+							
 							<p class="work-item__text">Мобільні додатки</p>
 						</li>
 						<li class="work-item">
-							<img src="./images/disign.jpg" alt="Планшет в руці" width="370" height="294" />
+							<picture>
+								<source
+									srcset="./images/work-box-3.webp 370w, ./images/work-box-3@2x.webp 740w"
+									type="image/webp"
+									sizes="(min-width: 1200px) 370px"
+								/>
+								<source
+									srcset="./images/work-box-3.jpg 370w, ./images/work-box-3@2x.jpg 740w"
+									type="image/jpeg"
+									sizes="(min-width: 1200px) 370px"
+								/>
+								<img src="./images/work-box-3.jpg" alt="Дизайн" width="370" />
+							</picture>
+							
 							<p class="work-item__text">Дизайнерські рішення</p>
 						</li>
 					</ul>
@@ -399,12 +435,9 @@
 				<form class="email">
 					<label for="subscrip" class="subtitle"> Підпишіться на розсилку </label>
 					<div class="email__wrap">
-						
-
 						<input type="email" id="subscrip" name="subscrip" class="email__input" placeholder="E-mail" />
 						<button type="submit" class="button--img button">Підписатися</button>
 					</div>
-					
 				</form>
 			</div>
 		</footer>

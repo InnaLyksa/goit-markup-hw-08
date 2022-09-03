@@ -1630,30 +1630,32 @@ button {
 .menu-conteiner {
   display: none;
 }
-.menu-conteiner.is-open {
-  position: absolute;
-  z-index: 10;
-  left: 50%;
-  top: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: start;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 40px 48px 20px;
-  background-color: #ffffff;
+@media screen and (max-width: 767px) {
+  .menu-conteiner.is-open {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: start;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px 48px 20px;
+    background-color: #ffffff;
+  }
 }
-@media screen and (min-width: 401px) and (max-width: 767px) {
+@media screen and (max-width: 767px) and (min-width: 401px) and (max-width: 767px) {
   .menu-conteiner.is-open {
     padding-left: 40px;
   }

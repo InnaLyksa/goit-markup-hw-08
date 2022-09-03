@@ -36,8 +36,9 @@
 
 .menu-conteiner {
 	display: none;
-
-	&.is-open {
+	
+	@media screen and (max-width: 767px) {
+		&.is-open {
 			position: absolute;
 			z-index: 10;
 			left: 50%;
@@ -56,7 +57,7 @@
 				padding-left: 40px;
 			}
 		}
-
+	}
 	@include tablet {
 		display: flex;
 		margin-left: auto;

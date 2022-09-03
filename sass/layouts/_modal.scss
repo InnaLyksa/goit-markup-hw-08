@@ -28,17 +28,16 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
-	width: 528px;
+	max-width: 450px;
+	width: 100%;
 	min-height: 581px;
 	background: #ffffff;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	// overflow: auto;
 
-	 @media screen and (max-width: 1200px) {
-        max-width: 450px;
-        width: calc(100% - 30px);
-    }
+	@include desktop {
+		max-width: 528px;
+	}
 }
 
 .modal__close {
@@ -51,9 +50,9 @@
 
 	top: 8px;
 	right: 8px;
-
-	width: 30px;
-	height: 30px;
+	padding: 9px 9px;
+	// width: 30px;
+	// height: 30px;
 	background-color: transparent;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
@@ -75,10 +74,9 @@
 	text-align: center;
 	margin-bottom: 12px;
 
-	 @include tablet {
-    line-height: 1.15;
-    }
-	
+	@include tablet {
+		line-height: 1.15;
+	}
 }
 
 // .modal__form
@@ -145,10 +143,10 @@
 }
 
 .policy {
-	@extend %flex-wrap;
+	@extend %flex-center;
+	align-items: center;
 
 	margin: 20px auto 30px auto;
-	font-size: $size-tiny;
 	line-height: 1.17;
 
 	&__txt {
@@ -157,19 +155,19 @@
 
 	&__link {
 		color: $accent-text-color;
-		margin-left: 7px;
 		text-decoration: underline;
-
 	}
-	 @include desktop {
-        font-size: $size-small;
-        line-height: 1.71;
-    }
+	@include desktop {
+		font-size: $size-small;
+		line-height: 1.71;
+	}
 }
 
 .policy__icon {
 	@include transitionthree(background-image, background-color, border);
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-right: 8px;
 	width: 16px;
 	height: 15px;

@@ -14,7 +14,7 @@
 	&__container {
 		padding: 118px 0;
 
-		@media screen and (min-width: 1200px) {
+		@include desktop {
 			padding: 200px 0;
 		}
 	}
@@ -24,7 +24,7 @@
 		background-image: linear-gradient(to right rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile@2x.jpg);
 	}
 
-	@media screen and (min-width: 768px) {
+	@include tablet {
 		background-image: linear-gradient(to right rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 		background-size: 768px 400px;
 	}
@@ -35,7 +35,7 @@
 		background-image: linear-gradient(to right rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero@2x.jpg);
 	}
 
-	@media screen and (min-width: 1200px) {
+	@include desktop {
 		background-image: linear-gradient(to right rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desktop.jpg);
 		background-size: 1600px 600px;
 	}
@@ -56,12 +56,12 @@
 		letter-spacing: $spacing-big;
 		text-transform: uppercase;
 
-		@media screen and (min-width: 768px) {
+		@include tablet {
 		
 			width: 360px;
 		}
 
-		@media screen and (min-width: 1200px) {
+		@include desktop {
 			font-size: $size-title;
 			line-height: 1.36;
 			width: 696px;
